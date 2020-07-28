@@ -1,0 +1,1 @@
+subdir(get_option('arch'))
