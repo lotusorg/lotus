@@ -1,5 +1,5 @@
 #include "libk/screen.h"
-#include "arch/x86_64/drivers/vga/vga.h"
+#include "arch/x86_64/devices/vga/vga.h"
 
 void screen_init()
 {

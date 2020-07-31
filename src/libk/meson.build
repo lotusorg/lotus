@@ -1,4 +1,4 @@
-libk_srcs = ['panic.c', 'kprintf.c']
+libk_srcs = ['panic.c', 'kprintf.c', 'kmalloc.c']
 
 libk_lib = static_library('libk',
                             libk_srcs,

@@ -7,11 +7,13 @@ add_project_arguments(  '-pedantic',
                         '-mno-mmx',
                         '-mno-80387',
                         '-mno-red-zone',
+                        '-DDEBUG=1',
                         language : 'c')
 
-#mlibc_ansic_dep =  dependency('mlibc',
-#                                default_options : ['static=true'],
-#                                fallback : ['mlibc', 'mlibc_ansic_dep'])
+#mlibc_dep =  dependency('mlibc',
+#                        default_options : ['static=true', 'headers_only=false'],
+#                        fallback : ['mlibc', 'mlibc_ansic_dep'],
+#                        include_type : 'system')
 
 printf_dep = dependency('printf', fallback : ['printf', 'printf_dep'])
 

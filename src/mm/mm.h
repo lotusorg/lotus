@@ -6,10 +6,11 @@ extern "C" {
 #endif
 
 #include <stddef.h>
+#include "boot/stivale/stivale.h"
 
 #define PAGE_SIZE ((size_t)4096)
 
-void pmm_init(struct stivale_struct stivale_struct);
+void pmm_init(struct stivale_struct* stivale_struct);
 void* pmm_alloc(size_t page_count);
 void pmm_free(void* ptr, size_t page_count);
 

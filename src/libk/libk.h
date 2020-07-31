@@ -9,7 +9,8 @@ extern "C" {
 #include <stdarg.h>
 
 void* kmalloc(size_t size);
-void* kfree(void* ptr);
+void kfree(void* ptr);
+void* krealloc(void* ptr, size_t size);
 
 int kprintf(const char* fmt, ...);
 int vkprintf(const char* fmt, va_list va);
