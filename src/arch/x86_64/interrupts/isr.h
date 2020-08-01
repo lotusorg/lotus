@@ -1,7 +1,11 @@
-#ifndef __ISR_H_
-#define __ISR_H_
+#ifndef __ISR_H__
+#define __ISR_H__
 
-#include "type.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdint.h>
 
 extern void isr0();
 extern void isr1();
@@ -37,6 +41,10 @@ extern void isr30();
 extern void isr31();
 
 void isr_load();
-void isr_handle(u64);
+void isr_handle(uint64_t code);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // __ISR_H_
