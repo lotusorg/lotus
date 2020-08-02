@@ -2,6 +2,7 @@
 #include "libk/screen.h"
 #include "libk/libk.h"
 #include "mm/mm.h"
+#include "arch/arch.h"
 
 char stack[65536] __attribute__((section (".kernel_stack"))) = {0};
 
@@ -22,6 +23,8 @@ void kmain(struct stivale_struct* stivale_struct)
     kprintf("hello kernel world!\n");
 
     pmm_init(stivale_struct);
+
+    init_arch();
 
     while(1);
 }

@@ -1,5 +1,8 @@
 #include "arch/x86_64/interrupts/idt.h"
 
+idt_entry_t idt[256];
+idt_info_t  idt_info;
+
 void idt_set_gate(int n, uint64_t handler)
 {
     idt[n].addr_1    = handler & 0xFFFF;

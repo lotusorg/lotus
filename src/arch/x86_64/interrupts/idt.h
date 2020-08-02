@@ -32,8 +32,8 @@ typedef struct {
 } __attribute__((packed)) idt_info_t;
 
 /* The IDT consists of 256 entries even though some of them are NULL. */
-idt_entry_t idt[256];
-idt_info_t  idt_info;
+extern idt_entry_t idt[256];
+extern idt_info_t  idt_info;
 
 void idt_set_gate(int gate_number, uint64_t handler);
 void idt_load();
